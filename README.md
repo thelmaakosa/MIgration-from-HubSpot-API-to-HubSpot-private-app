@@ -1,4 +1,4 @@
-## MIgration-from-HubSpot-API-to-HubSpot-private-app
+## Migration-from-HubSpot-API-to-HubSpot-private-app
 Migrated HubSpot API keys to HubSpot private apps due to the API deprecation November 30 2022.
 
 ## Project URL
