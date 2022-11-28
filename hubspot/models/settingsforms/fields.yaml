@@ -1,0 +1,70 @@
+fields:
+    section1:
+        label: 'Form 1'
+        span: full
+        type: section
+    contact_us_form:
+        label: 'contact_us_form'
+        span: left
+        type: dropdown
+    has_dropdown_homes:
+        label: 'bs.hubspot::lang.forms.fields.has_dropdown_homes'
+        span: right
+        type: switch
+    dropdown_fields:
+        label: 'bs.hubspot::lang.forms.fields.dropdown_fields'
+        span: full
+        dependsOn:
+            - contact_us_form
+        trigger:
+            action: show
+            field: has_dropdown_homes
+            condition: checked
+        type: dropdown
+#   //        house_page_form
+#   //contact_us_form
+#   //service_request_form
+    section2:
+        label: 'Form 2'
+        span: full
+        type: section
+    house_page_form:
+        label: 'house_page_form'
+        span: left
+        type: dropdown
+    has_dropdown_homes2:
+        label: 'bs.hubspot::lang.forms.fields.has_dropdown_homes'
+        span: right
+        type: switch
+    dropdown_fields2:
+        label: 'bs.hubspot::lang.forms.fields.dropdown_fields'
+        span: full
+        dependsOn:
+            - house_page_form
+        trigger:
+            action: show
+            field: has_dropdown_homes2
+            condition: checked
+        type: dropdown
+    section3:
+        label: 'Form 3'
+        span: full
+        type: section
+    service_request_form:
+        label: 'service_request_form'
+        span: left
+        type: dropdown
+    has_dropdown_homes3:
+        label: 'bs.hubspot::lang.forms.fields.has_dropdown_homes'
+        span: right
+        type: switch
+    dropdown_fields3:
+        label: 'bs.hubspot::lang.forms.fields.dropdown_fields'
+        span: full
+        dependsOn:
+            - service_request_form
+        trigger:
+            action: show
+            field: has_dropdown_homes3
+            condition: checked
+        type: dropdown

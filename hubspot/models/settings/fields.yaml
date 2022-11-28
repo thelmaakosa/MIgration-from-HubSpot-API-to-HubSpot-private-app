@@ -1,0 +1,5 @@
+fields:
+    hub_api_token:
+        label: 'bs.hubspot::lang.settings.fields.hub_api_token'
+        span: full
+        type: text
