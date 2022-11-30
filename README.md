@@ -7,3 +7,4 @@ https://robsonhomes.com
 ## Reference doc
 https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app
 https://legacydocs.hubspot.com/docs/methods/forms/submit_form_v3_authentication
+https://github.com/HubSpot/hubspot-php
