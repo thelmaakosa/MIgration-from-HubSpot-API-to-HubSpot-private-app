@@ -47,9 +47,11 @@ class SettingsForms extends Model
 
     private function prepareHubFormsForSelect ()
     {
-        $hubspot = new \SevenShores\Hubspot\Factory([
-            'key' => Settings::instance()->hub_api_token
-        ]);
+        // $hubspot = new \SevenShores\Hubspot\Factory([
+        //     'key' => Settings::instance()->hub_api_token
+        // ]);
+        $hubspot = SevenShores\Hubspot\Factory::createWithOAuth2Token(getenv(HUBSPOT_PRIVATE_APP_KEY));
+
         try {
             return array_reduce($hubspot->forms()->all()->toArray(), function ($acc, $item) {
                 if ($item['deletable'])
@@ -65,9 +67,10 @@ class SettingsForms extends Model
     public function getDropdownOptions ($fieldName, $value, $formData)
     {
 //        dump($formData);
-        $hubspot = new \SevenShores\Hubspot\Factory([
-            'key' => Settings::instance()->hub_api_token
-        ]);
+        // $hubspot = new \SevenShores\Hubspot\Factory([
+        //     'key' => Settings::instance()->hub_api_token
+        // ]);
+        $hubspot = SevenShores\Hubspot\Factory::createWithOAuth2Token(getenv(HUBSPOT_PRIVATE_APP_KEY));
 //        house_page_form
 //contact_us_form
 //service_request_form
